@@ -1,0 +1,47 @@
+#Not sure what you have done with this part Gabe, but here's what I had attached to my player character on a previous game. Run speed was set in GlobalScript so other
+#...characters could pull from it
+#MOVEMENT
+func _process(delta):
+	#Movement Arrows
+	if Input.is_key_pressed(KEY_LEFT):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.x-= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.x-= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_RIGHT):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.x+= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.x+= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_UP):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.y-= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.y-= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_DOWN):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.y+= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.y+= GlobalScript.MoveSpeed
+	
+	#Movement WASD
+	if Input.is_key_pressed(KEY_A):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.x-= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.x-= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_D):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.x+= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.x+= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_W):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.y-= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.y-= GlobalScript.MoveSpeed
+	if Input.is_key_pressed(KEY_S):
+		if Input.is_key_pressed(KEY_SHIFT):
+			self.position.y+= GlobalScript.MoveSpeed + 2
+		else:
+			self.position.y+= GlobalScript.MoveSpeed
